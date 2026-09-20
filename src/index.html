@@ -5,9 +5,153 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MP1</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="../src/css/main.scss">
+        <script src="../src/js/main.js"></script>
     </head>
     <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
+        <!-- <h1>Hello World! Welcome to MP1!</h1>
+        <img src="assets/image.jpg"> -->
+        <header>
+            <p id="logo">Sweet Treat</p>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#column-modal">Recipes</a>
+                <a href="#carousel">Favorites</a>
+                <a href="#background-img">Spotlight</a>
+                <a href="#video-tutorial">Tutorial</a>
+                <a href="#social-media">Connect</a>
+            </nav>
+        </header>
+
+        <section class="section" id="home">
+            <div class="home-content">
+                <h1 id="home-title">Sweet Treat</h1>
+                <p id="home-description">A collection of delicious recipes worth trying.</p>
+            </div>
+            <div class="scroll-down"><i class="fa-solid fa-angle-down"></i></div>
+        </section>
+
+        <section class="section" id="column-modal">
+            <h2 class="category-title">Explore Recipes</h2>
+            <div class="category-grid">
+                <button class="category-card" data-modal="modal-matcha">
+                    <i class="fa-solid fa-utensils"></i>
+                     <h3>Matcha</h3>
+                </button>
+                <button class="category-card" data-modal="modal-tea">
+                    <i class="fa-solid fa-utensils"></i>
+                     <h3>Tea</h3>
+                </button>
+                <button class="category-card" data-modal="modal-smoothie">
+                    <i class="fa-solid fa-utensils"></i>
+                     <h3>Smoothie</h3>
+                </button>
+            </div>
+
+            <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog -->
+            <dialog id="modal-matcha">
+                <div class="modal-content">
+                    <button class="modal-close">X</button>
+                    <h3>Matcha</h3>
+                    <p>Recipe content here.</p>
+                </div>
+            </dialog>
+            <dialog id="modal-tea">
+                <div class="modal-content">
+                    <button class="modal-close">X</button>
+                    <h3>Tea</h3>
+                    <p>Recipe content here.</p>
+                </div>
+            </dialog>
+            <dialog id="modal-smoothie">
+                <div class="modal-content">
+                    <button class="modal-close">X</button>
+                    <h3>Smoothie</h3>
+                    <p>Recipe content here.</p>
+                </div>
+            </dialog>
+        </section>
+
+        <section class="section" id="carousel">
+            <div class="carousel-container">
+                <h2>Featured Favorites</h2>
+                <div class="carousel">
+                    <button type="button" class="left-arrow"><i class="fa-solid fa-circle-chevron-left"></i></button>
+                    <!-- TO DO: Include subtitle for each slide -->
+                    <div class="carousel-slider">
+                        <div class="carousel-slide active">
+                            <img src="assets/image.jpg" alt="Example image 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/intro-background.jpg" alt="Example image 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/image.jpg" alt="Example image 3">
+                        </div>
+                    </div>
+
+                    <button type="button" class="right-arrow"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="background-img">
+            <div class="featured-card">
+                <p class="featured-title">Fun Fact</p>
+                <h2 id="background-title">Ceremonial Matcha</h2>
+                <p id="background-description">Comes from the youngest leaves of shade-grown tea plants, then are ground into fine powder. the quality of the powder can be found in the color. the higher grade matcha powder is usually bright green, while powdeer with a dull, yellowish tint usually means a lower grade or a powder that's gone stale. remember to keep it airtight in the fridge and use it within a few weeks of opening!</p>
+            </div>
+        </section>
+
+        <section class="section" id="video-tutorial">
+            <div class="video-container">
+                <h2 class="video-title">Watch &amp; Learn</h2>
+                <p class="video-text">Follow along with our easy drink-making tutorial.</p>
+                <video class="video-content" controls>
+                    <!--Source: https://www.youtube.com/watch?v=TxJtoBAa2w0 -->
+                    <source src="assets/video-example.mp4" type="video/mp4"/>
+                    Your browser doesn't support the video.
+                </video>
+            </div>
+        </section>
+
+        <section class="section" id="social-media">
+            <h2 class="social-title">Connect with us</h2>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Sweet Treat. All rights reserved.</p>
+        </footer>
+       
     </body>
 </html>
+
+
+
+<!-- 
+header + navbar w position indicator w navbar resize w smooth scroll
+title/home 
+3 columns + modal <dialog>
+carousel
+
+fixed-position background img 
+video
+footer + icons 
+
+
+acknowledgements: 
+- Used coolors to create website palette (https://coolors.co/0d1821-344966-b4cded-f0f4ef-bfcc94)
+- Used FontAwsome for website icons (https://fontawesome.com/)
+
+
+todo: 
+Video: Embedded video using HTML5 video tag - Example
+SCSS features/CSS variables - You must utilize some SCSS features (e.g. variables, mixins, etc). A plain CSS file will receive less points.
+CSS3 Animations: At least one use of CSS3 animations (e.g. fade in/out, transitions)
+-->
