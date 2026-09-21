@@ -140,9 +140,10 @@ header {
 
     #home-description {
         color: $ink-black;
-        font-size: 28px;
+        font-size: 20px;
         text-align: center;
-        margin: 0;
+        margin: 0 auto;
+        max-width: 600px;
         padding: 0 20px; 
     }
 }
@@ -162,7 +163,7 @@ header {
     }
 }
 
-@keyframes bounce {
+@keyframes bounce { 
     // https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@keyframes
     0% {
         transform: translateY(0);
@@ -187,7 +188,7 @@ header {
 
     .category-grid {
         // https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout
-        max-width: 1000px;
+        max-width: 660px;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -206,9 +207,12 @@ header {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
 
         &:hover {
-            background: $powder-blue;
+            background: $porcelain;
         }
 
         i {
@@ -231,6 +235,44 @@ dialog {
     .modal-content {
         position: relative;
         padding: 60px 30px 40px;
+
+        h3 {
+            margin: 0 0 16px;
+            font-size: 26px;
+        }
+    
+        h4 {
+            margin: 20px 0 8px;
+            font-size: 18px;
+            color: $yale-blue;
+        }
+    
+        p {
+            margin: 0 0 8px;
+        }
+        
+        // https://www.w3schools.com/cssref/pr_padding-left.php
+        // https://www.w3schools.com/css/css_list.asp 
+        ul {
+            margin: 0 0 8px;
+            line-height: 1.6;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ol {
+            margin: 0 0 8px;
+            line-height: 1.6;
+            padding-left: 20px;
+        }
+    
+        li {
+            margin-bottom: 6px;
+        }
+    
+        ul ul {
+            margin-top: 8px;
+        }
     }
 
     .modal-close {
@@ -242,7 +284,7 @@ dialog {
         background: none;
 
         &:hover {
-            background: $powder-blue;
+            background: $porcelain;
         }
     }
 }
@@ -277,9 +319,16 @@ dialog {
 
         img {
             // https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/object-fit
-            object-fit: cover;
+            object-fit: contain;
             width: 100%;
             height: 400px;
+        }
+
+        .carousel-credit {
+            font-size: 12px;
+            color: $yale-blue;
+            margin: 1px 0 0;
+            text-align: left;
         }
     }
 
@@ -297,6 +346,7 @@ dialog {
 
 /* fixed-position background img */
 #background-img {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -305,11 +355,24 @@ dialog {
     min-height: 60vh;
     background-color: $powder-blue;
 
-    background-image: url("../assets/intro-background.jpg");
+    background-image: url("../assets/jasmine-tea-leaves.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+
+    // https://www.w3schools.com/howto/howto_css_overlay.asp
+    .image-credit {
+        position: absolute;
+        font-size: 12px;
+        color: $color-white;
+        bottom: 12px;
+        left: 16px;
+        margin: 0;
+        background: rgba(0,0,0,0.4);
+        padding: 2px 8px;
+        border-radius: 6px;
+    }
 
     .featured-card {
         background-color: #FFFFFF;
@@ -360,6 +423,12 @@ dialog {
     display: block;
     width: 70%;
     margin: 0 auto;
+}
+
+.video-credit {
+    font-size: 12px;
+    color: $yale-blue;
+    margin: 8px 0 0;
 }
 
 /* social media */
