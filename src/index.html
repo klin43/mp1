@@ -10,8 +10,6 @@
         <script src="../src/js/main.js"></script>
     </head>
     <body>
-        <!-- <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg"> -->
         <header>
             <p id="logo">Sweet Treat</p>
             <nav>
@@ -36,36 +34,35 @@
         <section class="section" id="column-modal">
             <h2 class="category-title">Explore Recipes</h2>
             <div class="category-grid">
-                <button class="category-card" data-modal="modal-matcha">
+                <button type="button" class="category-card" data-modal="modal-matcha">
                     <i class="fa-solid fa-mug-saucer"></i>
                      <h3>Blueberry Matcha Latte</h3>
                 </button>
-                <button class="category-card" data-modal="modal-oolongtea">
+                <button type="button" class="category-card" data-modal="modal-oolongtea">
                     <i class="fa-solid fa-glass-water"></i>
                      <h3>Watermelon Orange Oolong Tea</h3>
                 </button>
-                <button class="category-card" data-modal="modal-smoothie">
+                <button type="button" class="category-card" data-modal="modal-smoothie">
                     <i class="fa-solid fa-blender"></i>
                      <h3>Mango Smoothie</h3>
                 </button>
-                <button class="category-card" data-modal="modal-jasmineMT">
+                <button type="button" class="category-card" data-modal="modal-jasmineMT">
                     <i class="fa-solid fa-jar"></i>
                      <h3>Jasmine Milk Tea</h3>
                 </button>
-                <button class="category-card" data-modal="modal-jasminetea">
+                <button type="button" class="category-card" data-modal="modal-jasminetea">
                     <i class="fa-solid fa-glass-water"></i>
                      <h3>Blackberry Iced Tea</h3>
                 </button>
-                <button class="category-card" data-modal="modal-coffee">
+                <button type="button" class="category-card" data-modal="modal-coffee">
                     <i class="fa-solid fa-mug-saucer"></i>
                      <h3>Pistachio Iced Coffee</h3>
                 </button>
             </div>
 
-            <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog -->
             <dialog id="modal-matcha">
                 <div class="modal-content">
-                    <button class="modal-close">X</button>
+                    <button type="button" class="modal-close">X</button>
                     <h3>Blueberry Matcha Latte</h3>
                     <h4>Ingredients</h4>
                     <ul>
@@ -99,7 +96,7 @@
             </dialog>
             <dialog id="modal-oolongtea">
                 <div class="modal-content">
-                    <button class="modal-close">X</button>
+                    <button type="button" class="modal-close">X</button>
                     <h3>Watermelon Orange Oolong Tea</h3>
                     <h4>Ingredients</h4>
                     <ul>
@@ -121,7 +118,7 @@
             </dialog>
             <dialog id="modal-smoothie">
                 <div class="modal-content">
-                    <button class="modal-close">X</button>
+                    <button type="button" class="modal-close">X</button>
                     <h3>Mango Smoothie</h3>
                     <h4>Ingredients</h4>
                     <ul>
@@ -140,7 +137,7 @@
             </dialog>
             <dialog id="modal-jasmineMT">
                 <div class="modal-content">
-                    <button class="modal-close">X</button>
+                    <button type="button" class="modal-close">X</button>
                     <h3>Jasmine Milk Tea</h3>
                     <h4>Ingredients</h4>
                     <ul>
@@ -160,7 +157,7 @@
             </dialog>
             <dialog id="modal-jasminetea">
                 <div class="modal-content">
-                    <button class="modal-close">X</button>
+                    <button type="button" class="modal-close">X</button>
                     <h3>Blackberry Iced Tea</h3>
                     <h4>Ingredients</h4>
                     <ul>
@@ -186,7 +183,7 @@
             </dialog>
             <dialog id="modal-coffee">
                 <div class="modal-content">
-                    <button class="modal-close">X</button>
+                    <button type="button" class="modal-close">X</button>
                     <h3>Pistachio Iced Coffee</h3>
                     <h4>Ingredients</h4>
                     <ul>
@@ -210,25 +207,20 @@
                 <h2>Featured Favorites</h2>
                 <div class="carousel">
                     <button type="button" class="left-arrow"><i class="fa-solid fa-circle-chevron-left"></i></button>
-                    <!-- TO DO: Include subtitle for each slide -->
                     <div class="carousel-slider">
                         <div class="carousel-slide active">
-                            <!--https://www.scrumdiddlyumptious.com/iced-blueberry-matcha-latte-for/237617-->
                             <img src="assets/blueberry-matcha-latte.jpg" alt="Blueberry Matcha Latte">
                             <p class="carousel-credit">Image by Olivia on Scrumdiddlyumptious</p>
                         </div>
                         <div class="carousel-slide">
-                            <!--https://southerncastiron.com/blackberry-iced-tea/-->
                             <img src="assets/blackberryjuice.jpg" alt="Blackberry Iced Tea">
                             <p class="carousel-credit">Image by Georgia Clarke on Southern Cast Iron</p>
                         </div>
                         <div class="carousel-slide">
-                            <!--https://lovingitvegan.com/mango-smoothie/-->
                             <img src="assets/Mango-Smoothie-2.jpg" alt="Mango Smoothie">
                             <p class="carousel-credit">Image by Alison Andrews on Loving It Vegan</p>
                         </div>
                         <div class="carousel-slide">
-                            <!--https://www.seattlecoffeegear.com/blogs/scg-blog/iced-pistachio-latte-recipe?srsltid=AU7gw4WlOOrn_PYTLUBLYgYF0hVsk33DT5gBm0LYnqqAnfaPztAK7ci_-->
                             <img src="assets/pistachio-coffee.jpg" alt="Pistachio Iced Coffee">
                             <p class="carousel-credit">Image by Pat on Seattle Coffee Gear</p>
                         </div>
@@ -243,7 +235,6 @@
             <div class="featured-card">
                 <p class="featured-title">Ingredient Spotlight</p>
                 <h2 id="background-title">Jasmine Tea</h2>
-                <!-- Image credits: https://buymejapan.com/blogs/japanese-skincare-and-beauty/oolong-and-jasmine-tea?srsltid=AU7gw4UQSVOvTsnPGr7aeYtMFFEs-g7LLeD09Og0WITObpkD4ahDInJm-->
                 <p id="background-description">
                     Jasmine tea is the oldest of all flavored teas, with the best coming from China's Fujian Province.
                     It's made through a traditional scenting process: fresh tea leaves are layered with jasmine flowers overnight to absorb their fragrance.
@@ -258,7 +249,6 @@
                 <h2 class="video-title">Watch &amp; Learn</h2>
                 <p class="video-text">A quick guide to whisking the perfect matcha.</p>
                 <video class="video-content" controls>
-                    <!--Source: https://www.youtube.com/shorts/jtXadzbnhtQ Credits: MeredithMao-->
                     <source src="assets/whisk-matcha.mp4" type="video/mp4"/>
                     Your browser doesn't support the video.
                 </video>
@@ -269,9 +259,9 @@
         <section class="section" id="social-media">
             <h2 class="social-title">Connect with us</h2>
             <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
             </div>
         </section>
 
@@ -281,26 +271,3 @@
        
     </body>
 </html>
-
-
-
-<!-- 
-header + navbar w position indicator w navbar resize w smooth scroll
-title/home 
-3 columns + modal <dialog>
-carousel
-fixed-position background img 
-video
-footer + icons 
-
-
-acknowledgements: 
-- Used coolors to create website palette (https://coolors.co/0d1821-344966-b4cded-f0f4ef-bfcc94)
-- Used FontAwsome for website icons (https://fontawesome.com/)
-
-
-todo: 
-Video: Embedded video using HTML5 video tag - Example
-SCSS features/CSS variables - You must utilize some SCSS features (e.g. variables, mixins, etc). A plain CSS file will receive less points.
-CSS3 Animations: At least one use of CSS3 animations (e.g. fade in/out, transitions)
--->

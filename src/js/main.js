@@ -1,19 +1,14 @@
-/* Your JS here. */
-console.log('Hello World!')
-
-// resize navbar + scroll position indicator 
 document.addEventListener("DOMContentLoaded", () => {
     const links = document.querySelectorAll("nav a");
     const sections = Array.from(links).map(link => document.querySelector(link.getAttribute("href")));
     const header = document.querySelector("header");
 
     const setActiveLink = () => {
-        // https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect 
         const navBottom = header.getBoundingClientRect().bottom;
         let currIdx = 0;
 
         sections.forEach((section, idx) => {
-            if (section.getBoundingClientRect().top <= navBottom) {
+            if (section.getBoundingClientRect().top <= navBottom +1) {
                 currIdx = idx; 
             }
         });
@@ -33,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     resizeHeader();
 });
 
-// modals
 document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".category-card");
     const dialogs = document.querySelectorAll("dialog");
@@ -53,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// carousel 
 document.addEventListener("DOMContentLoaded", () => {
     const slides = document.querySelectorAll(".carousel-slide");
     const rightArr = document.querySelector(".right-arrow");
@@ -63,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
         currSlide = idx;
         slides.forEach((s, i) => s.classList.toggle("active", i === currSlide));
         
-        // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
         rightArr.disabled = currSlide === slides.length - 1; 
         leftArr.disabled = currSlide === 0; 
     }
